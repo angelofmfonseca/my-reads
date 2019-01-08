@@ -18,6 +18,7 @@ To check if you have Node.js already installed on your computer, open your cmd a
 To check if you have NPM already installed on your computer, open your cmd and type on your command line npm -v and hit enter. If you already have NPM on your machine, it'll appear the version of the Node.js you have on your machine.
 
 $ node -v
+
 $ npm -v
 
 If you prefer, you might want to install Yarn, which is similar to Node.js, but a little bit faster.
