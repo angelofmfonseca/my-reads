@@ -5,9 +5,7 @@ class Look extends Component{
     render(){
         return(
             <div className="open-search">
-                <Link to={ "/search" }
-                    className="button"
-                >
+                <Link to={ "/search" } className="button">
                     Add a book
                 </Link>
             </div>

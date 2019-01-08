@@ -7,25 +7,25 @@ class index extends Component{
         super();
         this.state={
             books: [],
-            reading: [],
-            toRead: [],
+            currentlyReading: [],
+            wantToRead: [],
             read: [],
             moreBooks: (books) => {
-                const reading = books.filter(book => book.shelf === 'reading');
-                const toRead = books.filter(book => book.shelf === 'toRead');
+                const currentlyReading = books.filter(book => book.shelf === 'currentlyReading');
+                const wantToRead = books.filter(book => book.shelf === 'wantToRead');
                 const read = books.filter(book => book.shelf === 'read');
-                this.setState({ books, reading, toRead, read });
+                this.setState({ books, currentlyReading, wantToRead, read });
             },
             changeShelf: (book, newShelf, allShelfs) => {
                 console.log(newShelf);
-                const newBook = this.state.books.map(everyBook => {
+                const newBook = this.state.books.map(eachBook => {
                     const bookId = allShelfs[newShelf].find(
-                        bookId => bookId === everyBook.id
+                        bookId => bookId === eachBook.id
                     );
                     if (bookId){
-                        everyBook.shelf = newShelf;
+                        eachBook.shelf = newShelf;
                     }
-                    return everyBook;
+                    return eachBook;
                 });
                 this.state.moreBooks(newBook);
             }

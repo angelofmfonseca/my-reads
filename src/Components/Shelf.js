@@ -12,7 +12,11 @@ class Shelf extends Component{
                         { 
                             this.props.books && 
                             this.props.books.map(book => (
-                                <Book key={ book.id }{ ...book } changeShelf={ this.props.changeShelf }/>
+                                <Book 
+                                    key={ book.id }
+                                    { ...book } 
+                                    changeShelf={ this.props.changeShelf }
+                                />
                             ))
                         }
                     </ol>

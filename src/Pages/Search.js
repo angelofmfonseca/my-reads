@@ -32,7 +32,7 @@ class Search extends Component{
                 } else {
                     this.setState({ books: results })
                 }
-            } else {
+            } else { 
                 this.setState({ books: [] })
             }
         } catch (error){
@@ -43,9 +43,8 @@ class Search extends Component{
         return(
             <div className="search-books">
                 <div className="search-books-bar">
-                    <Link to={ "/" }
-                        className="close-search">
-                            Close
+                    <Link to={ "/" } className="close-search">
+                        Close
                     </Link>
                     <div className="search-books-input-wrapper">
                         <input 
@@ -59,15 +58,14 @@ class Search extends Component{
                 <div className="search-books-results">
                     <ol className="books-grid">
                         {
-                            this.state.books.length > 0 
-                            &&
+                            this.state.books.length > 0 &&
                             this.state.books.map(book => {
                                 const lookShelf = this.props.books.find(
                                     searchBook => searchBook.id === book.id)
                                 if (lookShelf){
                                     book.shelf = lookShelf.shelf
                                 } else {
-                                    book.shelf = "No shelf"
+                                    book.shelf = "none"
                                 }
                                 return (
                                     <Book 
@@ -75,13 +73,13 @@ class Search extends Component{
                                         { ...book } 
                                         changeShelf={ this.props.changeShelf }
                                     />
-                                );
+                                )
                             })
                         }
                         {
                             this.state.books.length === 0 &&
                             <h1 style={{ textAlign: "center" }}>
-                                No books found
+                                No Books Found
                             </h1>
                         }
                     </ol>

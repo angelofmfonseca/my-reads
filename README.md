@@ -1,92 +1,63 @@
-# MyReads Project
+# My Reads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This is the first project of the React Developer Nanodegree Program.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
 
-## TL;DR
+The project is about keeping track of somebody's reading. It's a React based web site where you can register the books you've already read, the ones you want to read and the books you are currently reading. 
 
-To get started developing right away:
+## Getting Started
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-## What You're Getting
-```bash
-├── CONTRIBUTING.md
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
-    │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
-```
+### Prerequisites and Installing
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+To get the project running, you have to install Node.js and NPM on your machine to install some packages. 
 
-## Backend Server
+To check if you have Node.js already installed on your computer, open your cmd and type on your command line node -v and hit enter. If you already have Node.js on your machine, it'll appear the version of the Node.js you have on your machine.
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+To check if you have NPM already installed on your computer, open your cmd and type on your command line npm -v and hit enter. If you already have NPM on your machine, it'll appear the version of the Node.js you have on your machine.
 
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
+$ node -v
+$ npm -v
 
-### `getAll`
+If you prefer, you might want to install Yarn, which is similar to Node.js, but a little bit faster.
 
-Method Signature:
+If you don't have Node/Yarn and NPM installed, you'll nedd to install them:
 
-```js
-getAll()
-```
+Open Node.js website on your browser: https://nodejs.org/en/download/
 
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
+Choose your platform and your system requirements (32-bits ou 64-bits).
 
-### `update`
+By clicking to install Node.js, choose the directory where the instalation will take place, and then open the downloaded file and go through the istalation steps (by default, you'll just have to keep clicking "Next").
 
-Method Signature:
+By doing that, you'll have installed Node.js and NPM on your machine. But, in case you want to install Yarn, open your cmd and type:
 
-```js
-update(book, shelf)
-```
+$ npm install yarn
 
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+After that you can open the project directory and get it tested and running, but you'll have to do just one more step and type on your command line and press enter:
 
-### `search`
+$ npm install
 
-Method Signature:
+You need to do it because the node modules folder is too big to get uploaded, so you'll have to install it manually to install all the project dependencies.
 
-```js
-search(query)
-```
+## Running the tests
 
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+After you do all those step, you'll be able to test the app.
 
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+On the command line, run the app:
 
-## Create React App
+$ yarn start
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+Please read [CONTRIBUTING.md](https://github.com/angelofmfonseca/my-reads-project) for details on my code of conduct, and the process for submitting pull requests to me.
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## Versioning
+
+We use [SemVer](http://github.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/angelofmfonseca/my-reads-project). 
+
+## Author
+
+* **Angelo Machado Fonseca** 

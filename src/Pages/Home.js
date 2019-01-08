@@ -23,12 +23,12 @@ class Home extends Component{
                     <div>
                         <Shelf 
                             title="Currently Reading" 
-                            books={ this.props.reading } 
+                            books={ this.props.currentlyReading } 
                             changeShelf={ this.props.changeShelf } 
                         />
                         <Shelf 
                             title="Want to Read" 
-                            books={ this.props.toRead } 
+                            books={ this.props.wantToRead } 
                             changeShelf={ this.props.changeShelf } 
                         />
                         <Shelf 

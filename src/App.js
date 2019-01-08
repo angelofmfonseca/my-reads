@@ -16,7 +16,7 @@ class BooksApp extends React.Component {
               exact path={ "/" } 
               render={() => (
               <Context.Consumer>
-                {context => <Home { ...context } />}
+                { context => <Home { ...context } /> }
               </Context.Consumer>
               )} 
             />
@@ -24,7 +24,7 @@ class BooksApp extends React.Component {
               exact path={ "/search" } 
               render={() => (
                 <Context.Consumer>
-                  {context => <Search { ...context } />}
+                  { context => <Search { ...context } /> }
                 </Context.Consumer>
               )} 
             />
